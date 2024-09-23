@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
                 th.setText(String.valueOf(random.nextInt(num2-num1)+num1));
                 Intent i = new Intent(getApplicationContext(),dois.class);
-                startActivity(i);
+                //startActivity(i);
 
             }
         });
