@@ -34,16 +34,14 @@ public class MainActivity extends AppCompatActivity {
                 float peso;
                 float altura;
 
-                EditText txt1 ;
-                EditText txt2;
-                TextView lbl;
+                EditText txtpeso ;
+                EditText txtaltura;
 
-                txt1 = findViewById(R.id.txtPeso);
-                txt2 = findViewById(R.id.txtAltura);
-                lbl = findViewById(R.id.lblIMC);
+                txtpeso = findViewById(R.id.txtPeso);
+                txtaltura = findViewById(R.id.txtAltura);
 
-                peso = Float.parseFloat(String.valueOf(txt1.getText()));
-                altura = Float.parseFloat(String.valueOf(txt2.getText()));
+                peso = Float.parseFloat(String.valueOf(txtpeso.getText()));
+                altura = Float.parseFloat(String.valueOf(txtaltura.getText()));
                 resultado = (peso)/(altura*altura);
 
                 Intent i = new Intent(getApplicationContext(),MainActivity2.class);
