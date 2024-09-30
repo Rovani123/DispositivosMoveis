@@ -20,9 +20,20 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        TextView t1;
+        TextView t2;
+        TextView resul;
+
+        t1 = findViewById(R.id.lblAltura3);
+        t2 =findViewById(R.id.lblPeso3);
+        resul = findViewById(R.id.lblIMC3);
         Intent i = getIntent();
-        Bundle b =i.getExtra();
+        Bundle b =i.getExtras();
         Float peso = b.getFloat("peso");
         Float altura = b.getFloat("altura");
+        Float resultado = b.getFloat("resultado");
+        t1.setText(String.valueOf(altura));
+        t2.setText(String.valueOf(peso));
+        resul.setText(String.valueOf(resultado));
     }
 }
