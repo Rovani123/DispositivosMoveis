@@ -20,5 +20,9 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Intent i = getIntent();
+        Bundle b =i.getExtra();
+        Float peso = b.getFloat("peso");
+        Float altura = b.getFloat("altura");
     }
 }
