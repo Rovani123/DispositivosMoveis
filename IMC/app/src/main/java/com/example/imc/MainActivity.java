@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent i = new Intent(getApplicationContext(),MainActivity2.class);
                 i.putExtra("peso",peso);
-                i.putExtra("altua",altura);
+                i.putExtra("altura",altura);
+                i.putExtra("resultado",resultado);
                 startActivity(i);
 
             }
