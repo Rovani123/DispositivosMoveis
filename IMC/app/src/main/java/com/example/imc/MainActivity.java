@@ -47,11 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 resultado = (peso)/(altura*altura);
 
                 Intent i = new Intent(getApplicationContext(),MainActivity2.class);
+                i.putExtra("peso",peso);
+                i.putExtra("altua",altura);
                 startActivity(i);
-
-
-                //lbl.setText(String.valueOf(resultado));
-
 
             }
         });
