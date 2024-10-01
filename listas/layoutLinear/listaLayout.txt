@@ -1,0 +1,13 @@
+1)
+é um grupo de views, determina o tipo de layout.
+
+2)
+a constante wrap_content define o tamanho de um componente baseado em seu conteudo
+a constnte math_parent define o tamanho de um componente baseado no tamanho da tela
+
+3)
+o linear layout organiza os componentes em sequencia.
+Na horizontal ele coloca um componente do lado do outro.
+Na vertical ele coloca um componente em baixo do outro.
+
+4)
