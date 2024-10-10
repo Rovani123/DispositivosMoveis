@@ -11,3 +11,9 @@ Na horizontal ele coloca um componente do lado do outro.
 Na vertical ele coloca um componente em baixo do outro.
 
 4)
+layout_weight determina o tamanho que um componente terá no layout
+layout_gravity determina onde os componentes estarão no layout
+
+7)
+é preciso colocar a orientação do layout linear em vertical
+
