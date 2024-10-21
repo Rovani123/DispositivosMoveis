@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     SQLiteDatabase banco;
     EditText txtNome, txtDataNsc, txtEmail;
     Button bt;
+    Button limpar;
     ListView list;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtemail);
         txtDataNsc = findViewById(R.id.txtdata);
         bt=findViewById(R.id.button);
+        limpar = findViewById(R.id.btlimpar);
         list = findViewById(R.id.listview);
 
         banco = openOrCreateDatabase("banco",MODE_PRIVATE, null);
@@ -54,6 +56,22 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Garr", Toast.LENGTH_SHORT).show();
             }
                 carregarlist();
+            }
+        });
+        limpar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                txtNome.setText("");
+                txtDataNsc.setText("");
+                txtEmail.setText("");
+            }
+        });
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                String pos = String.valueOf(i);
+//                Cursor cursor =banco.rawQuery("SELECT * FROM pessoas where id == ?",);
+//                txtNome.setText("");
+//                txtDataNsc.setText("");
+//                txtEmail.setText("");
             }
         });
         carregarlist();
