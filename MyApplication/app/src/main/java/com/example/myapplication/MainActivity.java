@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.Date;
 
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         bt=findViewById(R.id.button);
 
         banco = openOrCreateDatabase("banco",MODE_PRIVATE, null);
-        banco.execSQL("CREATE TABLE pessoas (id  NTEGER PRIMARY KEY autoincrement,nome varchar, email varchar, dtnsc date)");
+        banco.execSQL("CREATE TABLE if not exists pessoas (id  INTEGER PRIMARY KEY autoincrement,nome varchar, email varchar, dtnsc date)");
 
         bt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -39,7 +40,14 @@ public class MainActivity extends AppCompatActivity {
             cv.put("nome",nome);
             cv.put("email",email);
 
-            banco.insert("pessoas",null,cv);
+            long status =banco.insert("pessoas",null,cv);
+
+            if(status>0){
+                Toast.makeText(MainActivity.this, "Deu boa", Toast.LENGTH_SHORT).show();
+            } else{
+                Toast.makeText(MainActivity.this, "Garr", Toast.LENGTH_SHORT).show();
+            }
+
             }
         });
     }
