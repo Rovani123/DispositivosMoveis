@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             if(status>0){
                 Toast.makeText(MainActivity.this, "Deu boa", Toast.LENGTH_SHORT).show();
             } else{
-                Toast.makeText(MainActivity.this, "Garr", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Não foi", Toast.LENGTH_SHORT).show();
             }
                 carregarlist();
             }
@@ -65,16 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 txtEmail.setText("");
             }
         });
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                String pos = String.valueOf(i);
-//                Cursor cursor =banco.rawQuery("SELECT * FROM pessoas where id == ?",);
-//                txtNome.setText("");
-//                txtDataNsc.setText("");
-//                txtEmail.setText("");
-            }
-        });
-        carregarlist();
     }
 
     public void carregarlist(){
